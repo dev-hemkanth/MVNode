@@ -11,6 +11,7 @@ const cors = require('cors');
 const path = require('path');
 const sql = require('mssql');
 const app = express();
+require('dotenv').config()
 
 
 // Assign port

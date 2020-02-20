@@ -1,4 +1,6 @@
 const sql = require('mssql');
+require('dotenv').config()
+
 const connect = () => {
 //demo
 
@@ -9,13 +11,12 @@ const connect = () => {
     //     database: 'mvdiabetesdemo'
     // });
     
-    
   //  live
     const conn = new sql.ConnectionPool({
-        user: 'mvdiabetesusr',
-        password: '5ovFpf1M9Z8E1Nsp',
-        server: 'shop.mvdiabetes.com',
-        database: 'mvdiabetes'
+        user: process.env.user,
+        password: process.env.password,
+        server: process.env.server,
+        database: process.env.database
     });
 
     return conn;
